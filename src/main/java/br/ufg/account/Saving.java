@@ -2,9 +2,9 @@ package br.ufg.account;
 
 public class Saving implements Account {
 
-	private float balance;
+	private double balance;
 	
-	private float interestPercent;
+	private double interestPercent;
 	
 	private int birthDay;
 	
@@ -26,7 +26,7 @@ public class Saving implements Account {
 		return agency;
 	}
 	
-	public boolean withDraw(float amount) {
+	public boolean withDraw(double amount) {
 		if ((this.getBalance() - amount) < 0) {
 			return false;
 		}
@@ -34,12 +34,12 @@ public class Saving implements Account {
 		return true;
 	}
 	
-	public boolean deposit(float amount) {
+	public boolean deposit(double amount) {
 		this.setBalance(this.getBalance() + amount);
 		return true;
 	}
 	
-	public boolean transfer(float amount, Account destination) {
+	public boolean transfer(double amount, Account destination) {
 		boolean withDrawResult = this.withDraw(amount);
 		boolean depositResult = destination.deposit(amount);
 		if (withDrawResult && depositResult) {
@@ -54,11 +54,27 @@ public class Saving implements Account {
 		return false;
 	}
 
-	public float getBalance() {
+	public double getBalance() {
 		return balance;
 	}
 
-	private void setBalance(float balance) {
+	private void setBalance(double balance) {
 		this.balance = balance;
+	}
+
+	public int getBirthDay() {
+		return birthDay;
+	}
+
+	public void setBirthDay(int birthDay) {
+		this.birthDay = birthDay;
+	}
+
+	public double getInterestPercent() {
+		return interestPercent;
+	}
+
+	public void setInterestPercent(double interestPercent) {
+		this.interestPercent = interestPercent;
 	}
 }

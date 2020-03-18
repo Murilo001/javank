@@ -2,7 +2,7 @@ package br.ufg.account;
 
 public class Special implements Account {
 
-	private float limit;
+	private double limit;
 	
 	private int number;
 	
@@ -12,7 +12,7 @@ public class Special implements Account {
 	
 	private int payDay;
 	
-	public boolean withDraw(float amount) {
+	public boolean withDraw(double amount) {
 		if ((this.getLimit() - amount) < 0) {
 			return false;
 		}
@@ -20,12 +20,12 @@ public class Special implements Account {
 		return true;
 	}
 	
-	public boolean deposit(float amount) {
+	public boolean deposit(double amount) {
 		this.setLimit(this.getLimit() + amount);
 		return true;
 	}
 	
-	public boolean transfer(float amount, Account destination) {
+	public boolean transfer(double amount, Account destination) {
 		boolean withDrawResult = this.withDraw(amount);
 		boolean depositResult = destination.deposit(amount);
 		if (withDrawResult && depositResult) {
@@ -40,11 +40,11 @@ public class Special implements Account {
 		return false;
 	}
 
-	public float getLimit() {
-		return limit;
+	public double getLimit() {
+		return this.limit;
 	}
 
-	private void setLimit(float limit) {
+	private void setLimit(double limit) {
 		this.limit = limit;
 	}
 	
@@ -60,8 +60,16 @@ public class Special implements Account {
 		return this.agency;
 	}
 
-	public float getBalance() {
+	public double getBalance() {
 		return this.getLimit();
+	}
+
+	public int getPayDay() {
+		return payDay;
+	}
+
+	public void setPayDay(int payDay) {
+		this.payDay = payDay;
 	}
 
 }

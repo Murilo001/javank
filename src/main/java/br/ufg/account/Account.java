@@ -1,17 +1,17 @@
 package br.ufg.account;
 
-interface Account {
+public interface Account {
 	public int getNumber();
 	
 	public int getDigit();
 	
 	public int getAgency();
 	
-	public boolean withDraw(float amount);
+	public boolean withDraw(double amount);
 	
-	public boolean deposit(float amount);
+	public boolean deposit(double amount);
 	
-	public boolean transfer(float amount, Account destination);
+	public boolean transfer(double amount, Account destination);
 
-	public float getBalance();
+	public double getBalance();
 }

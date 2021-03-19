@@ -1,4 +1,4 @@
-package br.ufg.client;
+package br.ufg.javank.domain.client;
 
 public class JuridicPerson extends Client {
 	private int cnpj;

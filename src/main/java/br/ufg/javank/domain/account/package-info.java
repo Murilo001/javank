@@ -5,4 +5,4 @@
  * @author Murilo SSD
  *
  */
-package br.ufg.account;
+package br.ufg.javank.domain.account;

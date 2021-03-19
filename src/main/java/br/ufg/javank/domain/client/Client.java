@@ -1,8 +1,12 @@
-package br.ufg.client;
+package br.ufg.javank.domain.client;
 
 import java.util.ArrayList;
 import java.util.List;
 import br.ufg.account.*;
+import br.ufg.javank.domain.account.Account;
+import br.ufg.javank.domain.account.AccountType;
+import br.ufg.javank.domain.account.Saving;
+import br.ufg.javank.domain.account.Special;
 
 public class Client {
 	private int id;

@@ -1,4 +1,4 @@
-package br.ufg.account;
+package br.ufg.javank.domain.account;
 
 public class Saving implements Account {
 

@@ -1,7 +1,9 @@
-package br.ufg.javank;
+package br.ufg.javank.presentation;
 
-import br.ufg.client.*;
-import br.ufg.account.*;
+import br.ufg.javank.domain.account.Account;
+import br.ufg.javank.domain.account.AccountType;
+import br.ufg.javank.domain.client.JuridicPerson;
+import br.ufg.javank.domain.client.PhysicalPerson;
 
 /**
  * 

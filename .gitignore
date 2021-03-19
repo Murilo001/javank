@@ -5,5 +5,7 @@
 .classpath
 
 /.settings
-
+lib/
 target/
+.idea
+javank.iml
